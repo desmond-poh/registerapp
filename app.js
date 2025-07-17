@@ -8,19 +8,19 @@ const flash = require('connect-flash');
 const app = express();
 
 // Database connection
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Republic_C207',
-    database: 'c237_usersdb'
-});
-
 // const db = mysql.createConnection({
-//     host: 'c237-all.mysql.database.azure.com',
-//     user: 'c237admin',
-//     password: 'c2372025!',
-//     database: 'c237_e65m_registrationdb'
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'Republic_C207',
+//     database: 'c237_usersdb'
 // });
+
+const db = mysql.createConnection({
+    host: 'c237-all.mysql.database.azure.com',
+    user: 'c237admin',
+    password: 'c2372025!',
+    database: 'c237_e65m_registrationdb'
+});
 
 
 db.connect((err) => {
